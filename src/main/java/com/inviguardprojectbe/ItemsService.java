@@ -1,5 +1,6 @@
 package com.inviguardprojectbe;
 
+import com.inviguardprojectbe.repositories.ItemRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -8,20 +9,18 @@ import java.util.List;
 @Service
 public class ItemsService {
 
-    private long id = 0;
+   private ItemRepository itemRepository;
 
-    private List<Items> items = new ArrayList<>();
-
-    public ItemsService(){
-        this.items.add(new Items(this.id++,"Laptop Computer", 50));
-        this.items.add(new Items(this.id++,"Packing Boxes", 100));
-        this.items.add(new Items(this.id++,"Office Chairs", 10));
+    public ItemsService(ItemRepository itemRepository){
+        this.itemRepository = itemRepository;
     }
 
     public List<Items> getItemList(){
-        return this.items;
+        return this.itemRepository.findAll();
     }
 
+
+/*
    public Items getItem(long id){
         for(Items item : this.items){
             if(item.getId() == id){
@@ -56,5 +55,7 @@ public class ItemsService {
         current.setItemName(item.getItemName());
         current.setLeftInStock(item.getLeftInStock());
         return current;
-    }
+    } */
+
+
 }

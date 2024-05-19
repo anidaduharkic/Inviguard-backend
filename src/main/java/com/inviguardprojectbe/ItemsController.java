@@ -21,7 +21,7 @@ public class ItemsController {
         return this.items.getItemList();
     }
 
-    @GetMapping("{id}")
+   /* @GetMapping("{id}")
     public Items getItem(@PathVariable Integer id){
      return this.items.getItem(id);
     }
@@ -39,5 +39,5 @@ public class ItemsController {
     @PutMapping("{id}")
     public Items updateItem(@PathVariable Long id, @RequestBody Items item){
         return this.items.updateItem(id, item);
-    }
+    } */
 }
