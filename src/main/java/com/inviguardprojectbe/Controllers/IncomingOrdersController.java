@@ -1,5 +1,7 @@
-package com.inviguardprojectbe;
+package com.inviguardprojectbe.Controllers;
 
+import com.inviguardprojectbe.Classes.IncomingOrders;
+import com.inviguardprojectbe.Services.IncomingOrdersService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

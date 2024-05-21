@@ -1,5 +1,6 @@
-package com.inviguardprojectbe;
+package com.inviguardprojectbe.Services;
 
+import com.inviguardprojectbe.Classes.IncomingOrders;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

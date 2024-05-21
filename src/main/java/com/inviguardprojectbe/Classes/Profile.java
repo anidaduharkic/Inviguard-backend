@@ -1,4 +1,4 @@
-package com.inviguardprojectbe;
+package com.inviguardprojectbe.Classes;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -1,5 +1,7 @@
-package com.inviguardprojectbe;
+package com.inviguardprojectbe.Controllers;
 
+import com.inviguardprojectbe.Classes.Profile;
+import com.inviguardprojectbe.Services.ProfileService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
