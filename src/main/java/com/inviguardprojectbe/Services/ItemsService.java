@@ -16,7 +16,7 @@ public class ItemsService {
     }
 
     public List<Items> getItemList(){
-        return this.itemRepository.findAll();
+        return this.itemRepository.findAllByItemName("Chair");
     }
 
 
@@ -40,14 +40,12 @@ public class ItemsService {
             }
         }
     }
-
+*/
     public Items createItem(Items items) {
-        items.setId(this.id++);
-        this.items.add(items);
-        return items;
+       return this.itemRepository.save(items);
     }
 
-    public Items updateItem(Long id, Items item) {
+  /*  public Items updateItem(Long id, Items item) {
         Items current = this.getItem(id);
         if (current == null) {
             return null;

@@ -12,15 +12,15 @@ import java.util.List;
 public class ItemsController {
 
 
-    private final ItemsService items;
+    private final ItemsService itemsService;
 
     public ItemsController(ItemsService items){
-        this.items = items;
+        this.itemsService = items;
     }
 
     @GetMapping("list")
     public List<Items> getItems() {
-        return this.items.getItemList();
+        return this.itemsService.getItemList();
     }
 
    /* @GetMapping("{id}")
@@ -31,14 +31,14 @@ public class ItemsController {
     @DeleteMapping("{id}")
     public void deleteItem(@PathVariable Long id){
         this.items.deleteItem(id);
-    }
+    } */
 
     @PostMapping()
     public Items createItem(@RequestBody Items item){
-        return this.items.createItem(item);
+        return this.itemsService.createItem(item);
     }
 
-    @PutMapping("{id}")
+  /*  @PutMapping("{id}")
     public Items updateItem(@PathVariable Long id, @RequestBody Items item){
         return this.items.updateItem(id, item);
     } */
