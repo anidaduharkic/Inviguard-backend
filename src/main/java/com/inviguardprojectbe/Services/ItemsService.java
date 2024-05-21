@@ -1,9 +1,9 @@
-package com.inviguardprojectbe;
+package com.inviguardprojectbe.Services;
 
+import com.inviguardprojectbe.Classes.Items;
 import com.inviguardprojectbe.repositories.ItemRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -56,6 +56,5 @@ public class ItemsService {
         current.setLeftInStock(item.getLeftInStock());
         return current;
     } */
-
 
 }
