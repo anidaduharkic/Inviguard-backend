@@ -13,3 +13,6 @@ spring:
   data:
     jpa:
       repositories.enabled: true
+
+frontend:
+  url: ${FRONTEND_API_URL:http://localhost:4200}
