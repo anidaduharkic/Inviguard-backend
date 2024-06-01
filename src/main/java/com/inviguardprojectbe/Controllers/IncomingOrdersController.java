@@ -19,12 +19,12 @@ public class IncomingOrdersController {
     }
 
     @GetMapping("list")
-    public List<IncomingOrders> getOrder() {
+    public List<IncomingOrders> getOrders() {
         return this.incomingOrders.getOrderList();
     }
 
     @GetMapping("{id}")
-    public IncomingOrders getOrder(@PathVariable Integer id){
+    public IncomingOrders getOrder(@PathVariable Long id){
      return this.incomingOrders.getOrder(id);
     }
 

@@ -16,7 +16,7 @@ public class ItemsService {
     }
 
     public List<Items> getItemList(){
-        return this.itemRepository.findAllByItemName("Chair");
+        return this.itemRepository.findAll();
     }
 
 

@@ -7,6 +7,6 @@ import java.util.List;
 
 public interface ItemRepository extends JpaRepository<Items, Long> {
 
-    List<Items> findAllByItemName(String name);
+   // List<Items> findAll(String name);
 
 }
