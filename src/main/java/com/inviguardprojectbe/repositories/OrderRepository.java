@@ -1,13 +1,9 @@
 package com.inviguardprojectbe.repositories;
 
-import com.inviguardprojectbe.Classes.IncomingOrders;
+import com.inviguardprojectbe.models.entities.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+public interface OrderRepository extends JpaRepository<Order, Long> {
 
-import java.util.List;
-
-public interface OrderRepository extends JpaRepository<IncomingOrders, Long> {
-
-    //List<IncomingOrders> findAll(Long userId);
+   // List<Order> findAll(Long userId);
 }
