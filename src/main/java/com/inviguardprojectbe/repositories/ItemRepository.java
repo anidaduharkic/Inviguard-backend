@@ -1,12 +1,12 @@
 package com.inviguardprojectbe.repositories;
-import com.inviguardprojectbe.Classes.Items;
 
+import com.inviguardprojectbe.models.entities.Item;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface ItemRepository extends JpaRepository<Items, Long> {
+public interface ItemRepository extends JpaRepository<Item, Long> {
 
-   // List<Items> findAll(String name);
-
+   //Optional<Item> findById(Long id);
+   List<Item> findByLeftInStockLessThan(int i);
 }
