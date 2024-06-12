@@ -33,21 +33,12 @@ public class UserService {
         return toDto(user);
     }
 
-    public boolean isOrganization(Long id) {
-        User user =  getEntity(id);
-        return user.isOrganization();
-    }
-
     public void deleteProfile(long id) {
         userRepository.deleteById(id);
     }
 
     private static UserDto toDto(User user){
         return new UserDto(user.getId(), user.getFullName(), user.getPhoneNumber(), user.getEmail(), user.getPasswordHash(), user.isOrganization());
-    }
-
-    private static User toEntity(UserDto userDto){
-        return new User(userDto.getId(), userDto.getFullName(), userDto.getPhoneNumber(), userDto.getEmail(), userDto.getPassword(), userDto.isOrganization());
     }
 
     private User getEntity(long id){

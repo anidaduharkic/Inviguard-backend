@@ -38,7 +38,7 @@ public class UserController {
             return this.userService.getProfile(id);
 
         }
-        throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "User cant get other profiles");
+        throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "User can't get other profiles");
     }
 
     @DeleteMapping("/profile")

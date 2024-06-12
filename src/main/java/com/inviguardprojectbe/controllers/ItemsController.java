@@ -48,4 +48,5 @@ public class ItemsController {
     public List<Item> getLowStockItems() {
         return itemsService.getLowStockItems();
     }
+
 }
